@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #010101;
+}
+
+.wrapper {
+    padding: 0 6.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: crimson;
+    padding: 1.2rem 6.4rem;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 2.4rem;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+    border-radius: 0 0 2px 2px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav a.logo {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+header nav a.logo:hover {
+    text-shadow: 2px 0 0 #000;
+    transition: 0.5s;
+}
+
+header nav a.logo:not(:hover) {
+    transition: 0.5s;
+}
+
+main {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60vh;
+    background-color: #1a1515;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+main div.content {
+    padding: 1.2rem 3.2rem;
+    width: 100%;
+}
+
+main aside {
+    text-align: center;
+    background-color: #1f1919;
+    padding: 1.2rem 6.4rem;
+    min-width: fit-content;
+}
+
+main aside h2 {
+    margin-bottom: 0.6rem;
+}
+
+main aside ul li{
+    list-style: none;
+}
+
+main aside ul li a:hover {
+    color: #6e4646;
+    transition: 0.3s;
+}
+
+main aside ul li a:not(:hover) {
+    transition: 0.3s;
+}
+
+table.review {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2rem;
+}
+
+table.review a.asc, a.desc {
+    position: relative;
+}
+
+table.review a.asc:after {
+    position: absolute;
+    content: "↑";
+    top: -1.5px;
+    right: -10px;
+}
+
+table.review a.desc:after {
+    position: absolute;
+    content: "↓";
+    top: -1.5px;
+    right: -10px;
+}
+
+table.review tbody {
+    background-color: #fff;
+}
+
+table.review tbody td {
+    color: #000;
+    text-align: center;
+}
+
+table.review tbody tr:first-child {
+    background-color: crimson;
+    color: #fff;
+}
+
+table.review tbody td {
+    padding: 0.4rem 0;
+}
+
+table.review tbody tr:first-child th {
+    padding: 0.6rem 1.2rem;
+}
+
+table.review td:nth-child(1){
+    width: 10%;
+}
+
+table.review td:nth-child(2){
+    width: 10%;
+}
+
+table.review td:nth-child(3){
+    width: 16%;
+}
+
+table.review td:nth-child(4){
+    width: 40%;
+}
+
+table.review td:nth-child(5){
+    width: 12%;
+}
+
+table.review td:nth-child(6){
+    width: 12%;
+}
+
+table.review tr:nth-child(odd){
+    background-color: #eeecec;
+}
+
+table.review tr td.func {
+    position: relative;
+    min-height: 4.8rem;
+}
+
+table.review tr td.func span.delete, span.edit, span.info {
+    position: absolute;
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
+
+table.review tr td.func span.info {
+    background-color: cyan;
+    top: 0;
+}
+
+table.review tr td.func span.delete {
+    background-color: tomato;
+    top: 3.2rem;
+}
+
+table.review tr td.func span.edit {
+    background-color: darkseagreen;
+    top: 1.6rem;
+}
+
+table.review tr td.func span.info:after {
+    content: "\27A6";
+    vertical-align: top;
+    line-height: 1.6rem;
+}
+
+table.review tr td.func span.delete:after {
+    content: "\2716";
+    vertical-align: top;
+    line-height: 1.6rem;
+}
+
+table.review tr td.func span.edit:after {
+    content: "\270E";
+    vertical-align: top;
+    line-height: 1.6rem;
+}
+
+form {
+    text-align: center;
+}
+
+form input[type=text], textarea {
+    display: block;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-color: crimson;
+    color: #000;
+    margin: 1.2rem 0;
+    width: 100%;
+    resize: none;
+}
+
+form button {
+    padding: 0.6rem 1.6rem;
+    border-color: crimson;
+    color: crimson;
+    background-color: #000;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    border-color: #000;
+    color: #000;
+    background-color: crimson;
+    transition: 0.3s;
+}
+
+form button:not(:hover) {
+    transition: 0.3s;
+}
+
+form input[type=text]::placeholder, textarea::placeholder {
+    color: #000;
+    opacity: 0.7;
+}
+
+.errorCode, .successCode {
+    border-radius: 0.6rem;
+    margin-bottom: 0.4rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.errorCode {
+    background-color: crimson;
+}
+
+.successCode {
+    background-color: forestgreen;
+}
+
+p.middleLinkBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.middleLinkBox a {
+    display: block;
+    width: fit-content;
+}
+
+p.middleLinkBox a:hover {
+    text-decoration: underline;
+}
+
+p.noteReview {
+    background-color: thistle;
+    color: #000;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.6rem;
+    margin: 0.8rem 0 0.2rem 0;
+}
+
+footer {
+    background-color: #1a1515;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6.4rem;
+    font-size: 1.6rem;
+    border-top: 2px dotted #fff;
+}
+
+footer nav ul li {
+    list-style: none;
+}
